@@ -1,11 +1,11 @@
-/* Reset de estilos básicos para garantir consistência */
+
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
     max-width: 100%;
 }
 
-/* Estilos gerais */
+/* GERAL */
 body {
     font-family: Arial, sans-serif;
     background-color: #ae4d8238;
@@ -16,14 +16,14 @@ body {
 header {
     background-color: #AE4D83;
     color: #fff;
-    padding: 10px 0;
+    padding: 0px 0;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom:10px;
+    margin-top: 0px;
+    margin-bottom:0px;
     max-width: 100%;
 }
 
-/* Estilos da navegação */
+/* NAVEGAÇÃO */
 nav ul {
     list-style: none;
     background-color: #de549915;
@@ -57,7 +57,7 @@ nav ul li a:hover {
     max-width: 100%;
 }
 
-/* Estilos do banner */
+/* BANNER */
 .banner {
     background-image: url('Caminho-Para-Sua-Imagem/banner.jpg');
     background-size: cover;
@@ -80,7 +80,7 @@ nav ul li a:hover {
     max-width: 100%;
 }
 
-.btn {
+.cta-button {
     display: inline-block;
     background-color: #AE4D83;
     color: #fff;
@@ -91,7 +91,11 @@ nav ul li a:hover {
     max-width: 100%;
 }
 
-/* Estilos para a seção de serviços */
+.cta-button:hover {
+    background-color: #f5208a;
+}
+
+/* SERVIÇOS */
 .services {
     display: flex;
     flex-wrap: wrap;
@@ -111,7 +115,7 @@ nav ul li a:hover {
     text-align: center;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Inclui margens na largura */
+    box-sizing: border-box; 
     max-width: 100%;
 }
 .service img {
@@ -136,7 +140,7 @@ nav ul li a:hover {
 }
 
 
-/* Estilos para a seção de Agendamento */
+/* AGENDAMENTO */
 .appointment {
     background-color: #f9f9f9;
     padding: 40px;
@@ -208,7 +212,7 @@ nav ul li a:hover {
     max-width: 100%;
 }
 
-/* Estilos para a seção de Contato */
+/* CONTATO */
 .contact {
     background-color: #f5f5f5;
     padding: 40px;
@@ -235,8 +239,8 @@ nav ul li a:hover {
 }
 
 .contact iframe {
-    width: 50%; /* Ajuste a largura conforme necessário */
-    height: 400px; /* Ajuste a altura conforme necessário */
+    width: 50%; 
+    height: 400px; 
     border: none;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -269,8 +273,7 @@ address p {
     max-width: 100%;
 }
 
-/* Estilos para os ícones de redes sociais */
-/* Estilos para os ícones de redes sociais */
+/* REDE SOCIAL */
 .social-icons {
     margin-top: 20px;
     max-width: 100%;
@@ -286,6 +289,7 @@ address p {
     background-color: #fff; /* Cor de fundo dos ícones */
     padding: 10px; /* Espaçamento interno do botão */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
 }
 
 
@@ -293,12 +297,53 @@ address p {
 .social-icons a:hover {
     color: #f5208a;
     background-color: #AE4D83; /* Mudança de cor de fundo ao passar o mouse */
+    max-width: 100%;
 }
 
-
+/* RODAPÉ */
 footer {
     background-color: #AE4D83;
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    max-width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Ajuste o tamanho da fonte para telas menores, se necessário */
+    }
+
+    header {
+        padding: 5px 0; /* Reduza o espaço de preenchimento no cabeçalho */
+        
+    }
+
+    nav ul {
+        background-color: #AE4D83; /* Altere a cor de fundo do menu de navegação para melhorar a legibilidade */
+    }
+
+    nav ul li {
+        display: block; /* Altere para exibir os itens do menu verticalmente em telas menores */
+        margin: 0; /* Remova a margem entre os itens do menu */
+    }
+
+    .banner {
+        padding: 30px 0; /* Reduza o espaço de preenchimento no banner */
+    }
+
+    .service {
+        flex-basis: 100%; /* Faça os serviços ocuparem toda a largura em telas menores */
+        margin: 0 0 20px 0; /* Altere as margens dos serviços para criar espaço entre eles */
+    }
+
+    .appointment form {
+        max-width: 100%; /* Faça o formulário ocupar toda a largura em telas menores */
+    }
+
+    .contact iframe {
+        width: 100%; /* Faça o mapa se ajustar à largura da tela */
+        height: 300px; /* Ajuste a altura conforme necessário */
+    }
 }
